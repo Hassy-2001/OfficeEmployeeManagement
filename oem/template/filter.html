@@ -1,0 +1,25 @@
+{% extends 'ABase.html' %}
+{% block content %}
+
+<div class="container-fluid bg-dark bg-gardient p-2">
+<form action="filter.html" method="POST">
+    {% csrf_token %}
+
+  <div class="mb-2 text-light">
+      <label for="name"  class="form-label"><b>Employee Full Name</b></label>
+      <input type="text" class="form-control" id="name" value="{{name}}" name="name"><hr>
+
+      <label for="role"  class="form-label"><b>Role</b></label>
+      <input type="text" class="form-control" id="role" value="{{role}}" name="role"><hr>
+
+      <label for="department" class="form-label"><b>Department</b></label>
+      <input type="text" class="form-control" id="department" value="{{department}}" name="department"><hr>
+  </div>
+    <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+    </div>
+
+
+{% endblock %}
